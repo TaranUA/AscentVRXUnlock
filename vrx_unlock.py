@@ -749,7 +749,10 @@ def _global_options_after_command() -> argparse.ArgumentParser:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Unlock / control a Caddx VRX Pro or VRX Max over RNDIS USB-LAN (UDP).",
+        description=(
+            "Send Debug3 keys and read status from a Caddx VRX Pro or VRX Max "
+            "over RNDIS USB-LAN (UDP)."
+        ),
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     parser.add_argument("--host", help="device IPv4; skips discovery")
